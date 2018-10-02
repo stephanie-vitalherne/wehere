@@ -1,18 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_background"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="C O R N E R Z"
+            android:textSize="36sp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="The Digital Wallet"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/header"
+        android:text="LOOKING FOR A SIMPLER WALLET?"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:textColor="@color/bottomText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_above="@+id/header"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:background="@drawable/btn_sign_in_background"
+            android:textColor="@android:color/white"
+            android:text="SIGN IN"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSignRegister"
+            android:background="@drawable/btn_register_background"
+            android:textColor="@color/btnRegister"
+            android:text="REGISTER"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>
